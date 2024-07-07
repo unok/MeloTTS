@@ -9,7 +9,7 @@
       "extensions": ["ms-python.python", "ms-toolsai.jupyter"]
     }
   },
-  "postCreateCommand": "pip install -r apps/django-api/requirements.txt && apps/fish-speech && conda init && . /home/vscode/.bashrc && cd ../../",
+  "postCreateCommand": "bash postinstall.sh",
   "runArgs": ["--user", "vscode"],
   "mounts": [
     "source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached",

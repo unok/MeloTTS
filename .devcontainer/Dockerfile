@@ -1,6 +1,6 @@
 FROM python:3.12
 
-RUN apt-get update && apt-get install -y libsox-dev wget bzip2 ca-certificates
+RUN apt-get update && apt-get install -y libsox-dev wget bzip2 ca-certificates cmake
 # Minicondaのインストール
 ENV CONDA_DIR /opt/conda
 ENV PATH="/root/.bun/bin:$CONDA_DIR/bin:$PATH"
@@ -24,3 +24,4 @@ RUN useradd -m $USERNAME && \
   chown -R $USERNAME $CONDA_DIR /root/.bun && \
   chsh -s /bin/bash $USERNAME
 USER $USERNAME
+RUN $CONDA_DIR/bin/conda init
