@@ -1,0 +1,10 @@
+#!/bin/bash
+pip install huggingface_hub || die "Failed to install huggingface_hub"
+pip install -r apps/django-api/requirements.txt || die "Failed to install django-api requirements"
+cd apps/fish-speech || die "Failed to cd into fish-speech"
+yes y | conda create -n fish-speech || die "Failed to create conda environment"
+conda init || die "Failed to initialize conda"
+. /home/vscode/.bashrc || die "Failed to source .bashrc"
+conda activate fish-speech || die "Failed to activate conda environment"
+pip install -e . || die "Failed to install fish-speech"
+cd ../../ || die "Failed to cd into root directory"
