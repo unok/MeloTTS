@@ -1,3 +1,8 @@
-torch
-torchvision
-torchaudio
+# httpx==0.23.0
+# tokenizers==0.13.2
+# botocore=1.10.84
+# huggingface_hub>=0.10.0
+# gradio_client==0.1.0
+# torch
+# torchvision
+# torchaudio
