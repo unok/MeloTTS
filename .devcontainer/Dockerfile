@@ -1,6 +1,6 @@
 FROM node:20.15-slim
 
-RUN apt-get update && apt-get install -y libsox-dev wget bzip2 ca-certificates cmake sudo curl build-essential ffmpeg unzip git vim \
+RUN apt-get update && apt-get install -y libsox-dev wget bzip2 ca-certificates cmake sudo curl build-essential ffmpeg zip unzip git vim \
   && rm -rf /var/lib/apt/lists/*
 
 # ユーザ権限の設定

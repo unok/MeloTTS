@@ -1,0 +1,6 @@
+{
+  "name": "lp-chrome-extention",
+  "scripts": {
+    "build": "bun build src/background.ts --outdir dist && bun build src/content.ts --outdir dist && bun build src/popup.ts --outdir dist && cp src/popup.html manifest.json dist/ && zip -r lp-`date +%Y-%m-%d`.zip dist"
+  }
+}
